@@ -1,12 +1,6 @@
-import {Button} from "./tags.mjs";
+
 import {User, UserManager, UsersCollection} from "./usersWork.mjs";
-// const table = document.querySelector('table')
-// const myInput = document.createElement('tr')
-// myInput.innerHTML = `<td>${getUser.name}</td><td>${getUser.password}</td>`
-//
-//
-// table.appendChild(myInput)
-// table.appendChild(myInput2)
+import
 
 class Table {
     constructor(trArray) {
@@ -19,6 +13,9 @@ class Table {
         })
 
         return `<table>${string}</table>`
+    }
+    get() {
+        return this
     }
 
 }
@@ -91,7 +88,7 @@ class UserTableBuilder {
             trArray.push(this.tr(thArray))
         })
         let table = new Table(trArray)
-        return table.html()
+        return table
     }
     head() {
         const name = new ThrowHead(new HtmlValue('Имя'))
@@ -108,25 +105,19 @@ class UserTableBuilder {
         const name = new Throw(new HtmlValue(user.name))
         const password = new Throw(new HtmlValue(user.password))
         const id = new Throw(new HtmlValue(user.id))
-        const butObj = new Button()
-        const button = new Throw(new HtmlValue(butObj.get('Удалить')))
+        const button = new Throw(new HtmlValue('Удалить'))
         const thArray = [name, password, id, button]
         return thArray
     }
 }
 
 
+collection.add(user1)
+collection.add(user2)
+collection.add(user3)
+collection.add(user4)
+
 const builder = new UserTableBuilder(collection)
 
-const userManager = new UserManager(collection, builder)
-
-userManager.addUser(user1)
-
-userManager.addUser(user2)
-console.log("HAHAHAHA")
-userManager.addUser(user3)
-console.log("XAXAXA")
-console.log(userManager.addUser(user4))
-
-console.dir(builder.table)
-
+const table = builder.build()
+console.dir(table.trArray[0].thArray)

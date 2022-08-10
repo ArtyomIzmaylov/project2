@@ -41,10 +41,6 @@ class UserManager {
         this.coll.add(user)
     }
 
-    addUser(user) {
-        this.coll.add(user)
-        return this.builder.build()
-    }
 }
 
 
