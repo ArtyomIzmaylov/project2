@@ -22,3 +22,5 @@ const builder = new UserTableBuilder(collection)
 
 const table = builder.build().html()
 console.log(table)
+
+

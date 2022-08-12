@@ -22,6 +22,17 @@ class LogicTrrow {
 }
 
 
+class LogicThrowHead {
+
+    constructor(htmlValue) {
+        this.children = htmlValue
+        this.TagName = 'td'
+        this.atr = {}
+    }
+
+}
+
+
 
 class LogicThrow {
 
@@ -30,7 +41,6 @@ class LogicThrow {
         this.TagName = 'td'
         this.atr = {}
     }
-
 
 }
 
@@ -73,7 +83,9 @@ const tr2 = new LogicTrrow(thArray2)
 
 const trArray = [tr1, tr2]
 
-const table = new LogicTable(trArray)
+const logicTable = new LogicTable(trArray)
 
 
-console.log(table)
+console.log(logicTable.children[0].children)
+
+export {LogicTable, LogicThrow, LogicThrowHead, LogicTrrow, LogicHtmlValue}
