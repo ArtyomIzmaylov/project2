@@ -86,6 +86,6 @@ const trArray = [tr1, tr2]
 const logicTable = new LogicTable(trArray)
 
 
-console.log(logicTable.children[0].children)
+
 
 export {LogicTable, LogicThrow, LogicThrowHead, LogicTrrow, LogicHtmlValue}

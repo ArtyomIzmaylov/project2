@@ -38,3 +38,5 @@ class LogicUserTableBuilder {
         return thArray
     }
 }
+
+export {LogicUserTableBuilder}
