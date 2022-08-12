@@ -1,5 +1,5 @@
 import {User, UserManager, UsersCollection} from "./module/usersWork.mjs";
-import {Table} from "./module/table.mjs";
+import {Table} from "./module/first.mjs";
 import {hash} from "./module/hash.mjs";
 
 const collection = new UsersCollection()

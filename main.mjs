@@ -1,5 +1,5 @@
 import {User, UserManager, UsersCollection} from "./trash/array_new.mjs";
-import {Table} from "./module/table.mjs";
+import {Table} from "./module/first.mjs";
 
 
 

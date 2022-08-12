@@ -20,5 +20,5 @@ collection.add(user4)
 
 const builder = new UserTableBuilder(collection)
 
-const table = builder.build()
-console.dir(table.trArray[0].thArray)
+const table = builder.build().html()
+console.log(table)
